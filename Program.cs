@@ -1,4 +1,7 @@
-﻿// Задача 19: Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+﻿/*
+
+
+// Задача 19: Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
 // 14212 -> нет
 // 23432 -> да
 // 12821 -> да
@@ -19,10 +22,13 @@ if (number!.Length == 5){
 else Console.WriteLine($"Введите правильное число");
 
 
+
 // Задача 21: Напишите программу, которая принимает на вход координаты двух точек
 // и находит расстояние между ними в 3D пространстве.
 // A (3,6,8); B (2,1,-7), -> 15.84
 // A (7,-5, 0); B (1,-1,9) -> 11.53*/
+
+/*
 
 int x1 = ReadInt("Введите Х точки A: ");
 int y1 = ReadInt("Введите Y точки A: ");
@@ -43,3 +49,34 @@ int ReadInt(string message)
     System.Console.WriteLine(message);
     return Convert.ToInt32(Console.ReadLine());
 }
+
+*/
+
+//Задача 23: Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+// 3 -> 1, 8, 27
+// 5 -> 1, 8, 27, 64, 125
+
+Console.Write("Введите число: ");
+int cube = Convert.ToInt32(Console.ReadLine());
+
+void Cube(int[] cube){
+  int counter = 0;
+  int length = cube.Length;
+  while (counter <  length){
+    cube[counter] = Convert.ToInt32(Math.Pow(counter, 3));
+    counter++;
+  }
+}
+
+void PrintArry(int[] coll){
+  int count = coll.Length;
+  int index = 0;
+  while(index < count){
+    Console.Write(coll[index]+ " ");
+    index++;
+  }
+} 
+
+int[] arry = new int[cube+1];
+Cube(arry);
+PrintArry(arry);
