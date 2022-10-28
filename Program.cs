@@ -18,6 +18,7 @@ if (number!.Length == 5){
 }
 else Console.WriteLine($"Введите правильное число");
 
+
 // Задача 21: Напишите программу, которая принимает на вход координаты двух точек
 // и находит расстояние между ними в 3D пространстве.
 // A (3,6,8); B (2,1,-7), -> 15.84
@@ -42,6 +43,3 @@ int ReadInt(string message)
     System.Console.WriteLine(message);
     return Convert.ToInt32(Console.ReadLine());
 }
-
-
-
